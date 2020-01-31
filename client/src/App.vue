@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Login</router-link>|
-      <router-link to="/register">Register</router-link>
-    </div>
-    <router-view />
+    <v-app>
+      <v-content>
+        <PageHeader />
+        <v-container fluid>
+          <router-view />
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
+
+<script>
+import PageHeader from "@/components/Header.vue";
+export default {
+  components: {
+    PageHeader
+  }
+};
+</script>
 
 <style>
 #app {
@@ -15,18 +27,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  background-image: linear-gradient(to bottom, #86a8e7, #91eae4);
+  height: 100%;
 }
 </style>
