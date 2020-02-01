@@ -2,7 +2,7 @@
   <v-row align="center" justify="center">
     <v-col cols="12" sm="8" md="4" lg="4">
       <v-card class="my-12 elevation-12">
-        <v-toolbar color="primary" dark text>
+        <v-toolbar color="primary" dark flat>
           <v-toolbar-title class="nav">
             <router-link to="/" v-html="loginLabel"></router-link>|
             <router-link to="/register">Register</router-link>
